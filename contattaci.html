@@ -1,0 +1,200 @@
+<html>
+    <head>
+    <title>Contattaci - Banca Generica</title>
+    <link rel="icon" href="https://cdn1.iconfinder.com/data/icons/business-and-finance-20/200/vector_65_09-128.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat"> 
+	<style>
+		body {
+            margin: 0px;
+			padding: 0px;
+			height: 100%;
+			display: flex;
+			display: -webkit-flex;
+			justify-content: center;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+		}
+
+		#contenitore {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			display: -webkit-flex;
+			flex-direction: column;
+            font-family: 'Montserrat', sans-serif;
+		}
+        
+        #a {
+            background-color: Teal;
+            color: white;
+			width: 100%;
+			height: 10%;
+            display: flex;
+			display: -webkit-flex;
+			flex-direction: row;
+        }
+
+        #a1 {       
+            width: 10%;
+			height: 100%;
+        }
+
+        #a2 {
+            width: 80%;
+			height: 100%;
+            text-align: center;
+        }
+
+        #a3 {
+            width: 10%;
+			height: 100%;
+        }
+
+        #b {
+            
+			width: 100%;
+			height: 90%;
+            display: flex;
+			display: -webkit-flex;
+			flex-direction: row;
+        }
+
+        #b1 {
+            
+			width: 20%;
+			height: 100%;
+            display: flex;
+			display: -webkit-flex;
+			flex-direction: column;
+            background-color: rgb(230, 255, 255);
+        }
+
+        #b1-void {
+            
+            width: 100%;
+			height: 95%;
+        }
+
+        #b1-ancor {
+            
+            width: 100%;
+			height: 5%;
+            text-align: center;
+        }
+
+        #indietro {
+            text-decoration: none;
+            color: DarkBlue;
+        }
+
+        #indietro:hover {
+            color: Teal;
+        }
+
+        #b2 {
+            
+			width: 60%;
+			height: 100%;
+            display: flex;
+			display: -webkit-flex;
+			flex-direction: column;
+        }
+
+        #b2-h1 {
+            margin-left: 15%;
+        }
+
+        #contattaci {
+            margin-left: 15%;
+            margin-right: 15%;
+            text-align: justify;
+        }
+
+        #dove_siamo {
+            margin-left: 15%;
+            margin-right: 15%;
+            text-align: justify;
+        }
+
+        #map {
+            height: 50%;
+            width: 70%;
+            margin-top: 10px;
+            margin-left: 15%;
+        }
+
+        #b3 {
+            
+			width: 20%;
+			height: 100%;
+            background-color: rgb(230, 255, 255);
+        }
+
+        #home {
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+        }
+    </style>
+    </head>
+    <body>
+        <div id="contenitore">
+		    <div id="a">
+                <div id="a1">
+                    <table border="0" width="100%" height="100%">
+		                <tr align="left">
+                            <td valign="middle">
+                                <a href="index.html"><img src="https://cdn1.iconfinder.com/data/icons/business-and-finance-20/200/vector_65_09-64.png"></a>
+                            </td>
+                        </tr>
+		            </table>
+                </div>
+                <div id="a2">
+                    <table border="0" width="100%" height="100%">
+		                <tr align="center">
+                            <td valign="middle">
+                                <p id="home">BANCA GENERICA</p>
+                            </td>
+                        </tr>
+		            </table>
+                </div>
+                <div id="a3"></div>
+            </div>
+            <div id="b">
+                <div id="b1">
+                    <div id="b1-void"></div>
+                    <div id="b1-ancor"><a id="indietro" href="index.html">Torna indietro</a></div>
+                </div>
+                <div id="b2">
+                    <div id="b2-h1"><h1>Contattaci</h1></div>
+                    <div id="contattaci">
+                        <p><b>Segreteria:</b><br>Numero di telefono:&nbsp;&nbsp;0342 610xxx / +39 347 5642xxx<br>Email:&nbsp;&nbsp;bancagenerica1@gmail.com</p>        
+                    </div>
+                    <div id="b2-h1"><h1>Dove siamo</h1></div>
+                    <div id="map"></div>
+                    <script>
+                        function initMap() {
+                            var morbegno = {lat: 46.13179359999999, lng: 9.573743799999988};
+                            var map = new google.maps.Map(document.getElementById('map'), {
+                                zoom: 12,
+                                center: morbegno
+                            });
+                            var marker = new google.maps.Marker({
+                                position: morbegno,
+                                map: map
+                            });
+                        }
+                    </script>
+                    <script async defer
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtN3dYzMUbJTbJNklWmYblDmmTUEUbK4s&callback=initMap">
+                    </script>
+                    <div id="dove_siamo">
+                        <p><b>Indirizzo:</b><br>Via per S. Marco, 3</p>        
+                    </div>
+                </div>
+                <div id="b3"></div>
+            </div>
+		</div>
+    </body>
+</html>
